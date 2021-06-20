@@ -13,6 +13,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -21,22 +22,237 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Carragenergy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#technology">Technology</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <!-- Masthead-->
-        <header class="bg">
+        <header class="bg masthead" id="page-top">
             <div class="container">
                 <p class="bg-text heading">Carragenergy</p>
                 <p class="bg-text subheading">Your Future Green Battery</p>
-                <p class="bg-text">email us at partnership@carragenergy.com</p>
+                <p class="bg-text subsubheading">Interested in partnering? Send your email to be contacted by our team</p>
+            </div>
+            <div class="container">
+                <form role="form" method="post" id="reused_form1">
+                    <div class="row justify-content-center p-4">
+                        <div class="form-group col-sm-6">
+                            <input type="email" class="form-control form-style" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-style col-sm-3 col-6">Contact Us!</button>
+                    </div>
+                </form>
+            </div>
+            <div id="success_message" style="width:100%; height:100%; display:none; ">
+                <h3>Posted your message successfully! Wait for our team to contact you.</h3>
+            </div>
+            <div id="error_message"
+                    style="width:100%; height:100%; display:none; ">
+                        <h3>Error</h3>
+                        Sorry there was an error sending your form.
+            </div>
+        </header>
+        <!-- Introduction-->
+        <div class="container mt-3" id="introduction">
+            <p class="body-heading mt-4">What is Carragenergy?</p>
+            <div class="row">
+                <div class="col-md-6 text-center mb-3">
+                    <img src="assets/img/battery.png" class="img-fluid img-body" alt="battery">
+                </div>
+                <div class="col-md-6 mb-5">
+                    <p class="body-text">
+                        Carragenergy is a eco-friendly yet superior battery compared with Li-Ion AA battery.
+                        Carragenergy came as an idea as an energy shift towards greener and more sustainable Electrochemical Energy Storage.
+                    </p>
+                    <div class="row mt-5">
+                        <div class="col-md-4 text-center">
+                            <i class="m-2 fa fa-leaf fa-5x icon-color"></i>
+                            <p class="icon-text">Greener</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="m-2 fa fa-bolt fa-5x icon-color"></i>
+                            <p class="icon-text">Higher Performance</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="m-2 fa fa-handshake fa-5x icon-color"></i>
+                            <p class="icon-text">Empowering Local Communities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Technology-->
+        <div class="container" id="technology">
+            <p class="body-heading">Our Technology</p>
+            <p class="body-text">
+                Carragenergy is an organic rechargeable battery with organic electrode, recyclable components, and biopolymer electrolyte from red seaweed extract named Carragenean.
+                Watch our video to see how our prototype work.
+            </p>
+            <!-- Video-->
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mbYV2LXrT5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- Team-->
+        <div class="container mt-3 mb-3" id="team">
+            <p class="body-heading mt-4">Our Team</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <!-- Card-->
+                    <div class="card shadow-sm border-style">
+                        <div class="card-body p-0"><img src="assets/img/team/1.jpg" alt="Photo Team 1" class="w-100 card-img-top img-radius">
+                            <div class="p-4">
+                                <p class="mb-0 subheading">Richie Fane</p>
+                                <p>Business Strategist & Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <!-- Card-->
+                    <div class="card shadow-sm border-style">
+                        <div class="card-body p-0"><img src="assets/img/team/2.jpg" alt="Photo Team 1" class="w-100 card-img-top img-radius">
+                            <div class="p-4">
+                                <p class="mb-0 subheading">Yumna Dzakiyyah</p>
+                                <p>Product Research & Development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <!-- Card-->
+                    <div class="card shadow-sm border-style">
+                        <div class="card-body p-0"><img src="assets/img/team/3.jpg" alt="Photo Team 1" class="w-100 card-img-top img-radius img-cio">
+                            <div class="p-4">
+                                <p class="mb-0 subheading">Syahriza Ilmi</p>
+                                <p>Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call to Action-->
+        <header class="footer mastfoot" id="contact">
+            <div class="container">
+                <p class="bg-text heading">Interested in Creating future energy for world?</p>
+                <p class="bg-text subheading">Partner with us right now</p>
+                <p class="bg-text subsubheading">Submit your email and our team will contact you</p>
+            </div>
+            <div class="container">
+                <form role="form" method="post" id="reused_form2"> 
+                    <div class="row justify-content-center p-4">
+                        <div class="form-group col-sm-6">
+                            <input type="email" class="form-control form-style" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-style col-sm-3 col-6">Contact Us!</button>
+                    </div>
+                </form>
             </div>
         </header>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            $(function()
+            {
+                function after_form_submitted(data)
+                {
+                    if(data.result == 'success')
+                    {
+                        $('#success_message').show();
+                        $('#error_message').hide();
+                    }
+                    else
+                    {
+                        $('#error_message').append('<ul></ul>');
+            
+                        jQuery.each(data.errors,function(key,val)
+                        {
+                            $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+                        });
+                        $('#success_message').hide();
+                        $('#error_message').show();
+            
+                        //reverse the response on the button
+                        $('button[type="button"]', $form).each(function()
+                        {
+                            $btn = $(this);
+                            label = $btn.prop('orig_label');
+                            if(label)
+                            {
+                                $btn.prop('type','submit' );
+                                $btn.text(label);
+                                $btn.prop('orig_label','');
+                            }
+                        });
+            
+                    }//else
+                }
+            
+                $('#reused_form1').submit(function(e){
+                    e.preventDefault();
+            
+                    $form = $(this);
+                    //show some response on the button
+                    $('button[type="submit"]', $form).each(function()
+                    {
+                        $btn = $(this);
+                        $btn.prop('type','button' );
+                        $btn.prop('orig_label',$btn.text());
+                        $btn.text('Sending ...');
+                    });
+            
+            
+                        $.ajax({
+                        type: "POST",
+                        url: 'handler.php',
+                        data: $form.serialize(),
+                        success: after_form_submitted,
+                        dataType: 'json'
+                        });
+            
+                });
+
+                $('#reused_form2').submit(function(e){
+                    e.preventDefault();
+            
+                    $form = $(this);
+                    //show some response on the button
+                    $('button[type="submit"]', $form).each(function()
+                    {
+                        $btn = $(this);
+                        $btn.prop('type','button' );
+                        $btn.prop('orig_label',$btn.text());
+                        $btn.text('Sending ...');
+                    });
+            
+            
+                        $.ajax({
+                        type: "POST",
+                        url: 'handler.php',
+                        data: $form.serialize(),
+                        success: after_form_submitted,
+                        dataType: 'json'
+                        });
+            
+                });
+            });
+            </script>
     </body>
 </html>

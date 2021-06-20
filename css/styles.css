@@ -1,6 +1,6 @@
 body, html {
   height: 100%;
-  font-family: 'Montserrat';
+  font-family:"Montserrat" !important;
   font-size: 100%
 }
 
@@ -18,13 +18,32 @@ body, html {
   background-size: cover;
 
   /* Position */
-  position: fixed; 
   top: 0; 
   left: 0; 
-
-  padding-top: 70vh;
 }
+.footer { 
+  /* The image used */
+  background-image: url("../assets/img/about/footer.png");
 
+  /* Full height & width*/
+  height: 100%; 
+  width: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: 30% 0; 
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Position */
+  top: 0; 
+  left: 0; 
+}
+.masthead{
+  padding-top: 45vh;
+}
+.mastfoot{
+  padding-top: 10vh;
+}
 .bg-text{
   color: white;
   text-align: center;
@@ -35,8 +54,126 @@ body, html {
 }
 
 .heading{
-  font-size: 6vh;
+  font-size: 7vh;
 }
 .subheading{
   font-size: 4vh;
+}
+.subsubheading{
+  font-size: 2vh;
+}
+
+.btn-style{
+  background-color: #1A4314 !important;
+  border-radius: 20px !important;
+  border-width: 0 !important;
+  border-color: #1A4314 !important;
+  height: 5vh !important;
+  padding: 2px !important;
+}
+.form-style{
+  border-radius: 20px !important;
+}
+
+.body-heading{
+  font-size: 6vh;
+  color: #1A4314;
+}
+
+.body-text{
+  line-height:3.5vh !important;
+  font-size: 2.5vh;
+}
+
+.icon-text{
+  font-size: 3vh;
+}
+
+.img-body{
+  max-height: 50vh !important;
+}
+
+.icon-color {
+  color: #2C5E1A;
+}
+
+.card-photo{
+  max-height: 50vh;
+  max-width: 100%;
+}
+
+.border-style{
+  border-bottom-width: 10px !important;
+  border-bottom-color: #2C5E1A !important;
+  border-radius: 20px!important;
+}
+
+.img-radius{
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  max-height: 40vh !important;
+}
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: black;
+}
+#mainNav .navbar-toggler {
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#mainNav .navbar-brand {
+  color: #52BF37;
+  font-weight: 700;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+#mainNav .navbar-brand img {
+  height: 1.5rem;
+}
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.0625em;
+}
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #52BF37;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border: none;
+    background-color: transparent;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand {
+    font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand img {
+    height: 2rem;
+    transition: height 0.3s ease-in-out;
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+  }
+  #mainNav.navbar-shrink .navbar-brand svg,
+#mainNav.navbar-shrink .navbar-brand img {
+    height: 1.5rem;
+  }
+  #mainNav .navbar-nav .nav-item {
+    margin-right: 1rem;
+  }
+  #mainNav .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
 }
