@@ -42,7 +42,7 @@ body, html {
   padding-top: 55vh;
 }
 .mastfoot{
-  padding-top: 10vh;
+  padding-top: 15vw;
 }
 .bg-text{
   color: white;
@@ -107,6 +107,12 @@ body, html {
   border-bottom-color: #2C5E1A !important;
   border-radius: 20px!important;
 }
+.border-style-up{
+  border-top-width: 10px !important;
+  border-top-color: #2C5E1A !important;
+  border-radius: 20px!important;
+}
+
 
 .img-radius{
   border-top-left-radius: 20px !important;
@@ -176,4 +182,14 @@ body, html {
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
   }
+}
+
+.form-style{
+  margin-bottom: 1vh !important;
+  margin-top: 1vh !important;
+  border-radius: 20px !important;
+}
+
+.carousel-img{
+  max-height: 100% !important;
 }
