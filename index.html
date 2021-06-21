@@ -45,25 +45,10 @@
             <div class="container">
                 <p class="bg-text heading">Carragenergy</p>
                 <p class="bg-text subheading">Your Future Green Battery</p>
-                <p class="bg-text subsubheading">Interested in partnering? Send your email to be contacted by our team</p>
-            </div>
-            <div class="container">
-                <form role="form" method="post" id="reused_form1">
-                    <div class="row justify-content-center p-4">
-                        <div class="form-group col-sm-6">
-                            <input type="email" class="form-control form-style" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-style col-sm-3 col-6">Contact Us!</button>
-                    </div>
-                </form>
-            </div>
-            <div id="success_message" style="width:100%; height:100%; display:none; ">
-                <h3>Posted your message successfully! Wait for our team to contact you.</h3>
-            </div>
-            <div id="error_message"
-                    style="width:100%; height:100%; display:none; ">
-                        <h3>Error</h3>
-                        Sorry there was an error sending your form.
+                <p class="bg-text subsubheading">Interested in partnering?</p>
+                <div class="row justify-content-center">
+                    <a class="nav-link" href="#contact"><button class="btn btn-primary btn-style">Contact Us!</button></a>
+                </div>
             </div>
         </header>
         <!-- Introduction-->
@@ -95,6 +80,7 @@
                 </div>
             </div>
         </div>
+        <!-- Problem-->
         <!-- Technology-->
         <div class="container" id="technology">
             <p class="body-heading">Our Technology</p>
@@ -111,7 +97,7 @@
         <div class="container mt-3 mb-3" id="team">
             <p class="body-heading mt-4">Our Team</p>
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                     <!-- Card-->
                     <div class="card shadow-sm border-style">
                         <div class="card-body p-0"><img src="assets/img/team/1.jpg" alt="Photo Team 1" class="w-100 card-img-top img-radius">
@@ -122,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                     <!-- Card-->
                     <div class="card shadow-sm border-style">
                         <div class="card-body p-0"><img src="assets/img/team/2.jpg" alt="Photo Team 1" class="w-100 card-img-top img-radius">
@@ -133,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                     <!-- Card-->
                     <div class="card shadow-sm border-style">
                         <div class="card-body p-0"><img src="assets/img/team/3.jpg" alt="Photo Team 1" class="w-100 card-img-top img-radius img-cio">
@@ -153,106 +139,11 @@
                 <p class="bg-text subheading">Partner with us right now</p>
                 <p class="bg-text subsubheading">Submit your email and our team will contact you</p>
             </div>
-            <div class="container">
-                <form role="form" method="post" id="reused_form2"> 
-                    <div class="row justify-content-center p-4">
-                        <div class="form-group col-sm-6">
-                            <input type="email" class="form-control form-style" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-style col-sm-3 col-6">Contact Us!</button>
-                    </div>
-                </form>
-            </div>
+            <p class="bg-text subsubheading">Or contact us at partnership@carragenergy.com</p>
         </header>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <script>
-            $(function()
-            {
-                function after_form_submitted(data)
-                {
-                    if(data.result == 'success')
-                    {
-                        $('#success_message').show();
-                        $('#error_message').hide();
-                    }
-                    else
-                    {
-                        $('#error_message').append('<ul></ul>');
-            
-                        jQuery.each(data.errors,function(key,val)
-                        {
-                            $('#error_message ul').append('<li>'+key+':'+val+'</li>');
-                        });
-                        $('#success_message').hide();
-                        $('#error_message').show();
-            
-                        //reverse the response on the button
-                        $('button[type="button"]', $form).each(function()
-                        {
-                            $btn = $(this);
-                            label = $btn.prop('orig_label');
-                            if(label)
-                            {
-                                $btn.prop('type','submit' );
-                                $btn.text(label);
-                                $btn.prop('orig_label','');
-                            }
-                        });
-            
-                    }//else
-                }
-            
-                $('#reused_form1').submit(function(e){
-                    e.preventDefault();
-            
-                    $form = $(this);
-                    //show some response on the button
-                    $('button[type="submit"]', $form).each(function()
-                    {
-                        $btn = $(this);
-                        $btn.prop('type','button' );
-                        $btn.prop('orig_label',$btn.text());
-                        $btn.text('Sending ...');
-                    });
-            
-            
-                        $.ajax({
-                        type: "POST",
-                        url: 'handler.php',
-                        data: $form.serialize(),
-                        success: after_form_submitted,
-                        dataType: 'json'
-                        });
-            
-                });
-
-                $('#reused_form2').submit(function(e){
-                    e.preventDefault();
-            
-                    $form = $(this);
-                    //show some response on the button
-                    $('button[type="submit"]', $form).each(function()
-                    {
-                        $btn = $(this);
-                        $btn.prop('type','button' );
-                        $btn.prop('orig_label',$btn.text());
-                        $btn.text('Sending ...');
-                    });
-            
-            
-                        $.ajax({
-                        type: "POST",
-                        url: 'handler.php',
-                        data: $form.serialize(),
-                        success: after_form_submitted,
-                        dataType: 'json'
-                        });
-            
-                });
-            });
-            </script>
     </body>
 </html>

@@ -39,7 +39,7 @@ body, html {
   left: 0; 
 }
 .masthead{
-  padding-top: 45vh;
+  padding-top: 55vh;
 }
 .mastfoot{
   padding-top: 10vh;
@@ -69,7 +69,7 @@ body, html {
   border-width: 0 !important;
   border-color: #1A4314 !important;
   height: 5vh !important;
-  padding: 2px !important;
+  width: 40vh !important;
 }
 .form-style{
   border-radius: 20px !important;
